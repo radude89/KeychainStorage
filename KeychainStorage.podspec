@@ -27,5 +27,6 @@ Pod::Spec.new do |s|
 
   s.source_files = "KeychainStorage/*.{swift}"
   s.swift_version = "5.0"
+  s.ios.framework  = 'Security'
 
 end
