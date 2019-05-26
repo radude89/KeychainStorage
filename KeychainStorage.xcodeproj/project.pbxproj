@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F7C04A642299A9F20099699E /* KeychainStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C04A5A2299A9F20099699E /* KeychainStorage.framework */; };
-		F7C04A692299A9F20099699E /* KeychainStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A682299A9F20099699E /* KeychainStorageTests.swift */; };
 		F7C04A6B2299A9F20099699E /* KeychainStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C04A5D2299A9F20099699E /* KeychainStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7C04A752299AACA0099699E /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A742299AACA0099699E /* KeyValueStorage.swift */; };
 		F7C04A772299AB360099699E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A762299AB360099699E /* KeychainStorage.swift */; };
 		F7C04A792299ABF10099699E /* KeychainQueryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A782299ABF10099699E /* KeychainQueryFactory.swift */; };
+		F7C04A7B229A70920099699E /* KeychainQueryFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A7A229A70920099699E /* KeychainQueryFactoryTests.swift */; };
+		F7C04A83229A70BB0099699E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A82229A70BB0099699E /* AppDelegate.swift */; };
+		F7C04A95229A71B30099699E /* KeychainStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A94229A71B30099699E /* KeychainStorageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,13 @@
 			remoteGlobalIDString = F7C04A592299A9F20099699E;
 			remoteInfo = KeychainStorage;
 		};
+		F7C04A92229A711C0099699E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C04A512299A9F20099699E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C04A7F229A70BB0099699E;
+			remoteInfo = KeychainStorageHost;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -30,11 +39,15 @@
 		F7C04A5D2299A9F20099699E /* KeychainStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainStorage.h; sourceTree = "<group>"; };
 		F7C04A5E2299A9F20099699E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7C04A632299A9F20099699E /* KeychainStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C04A682299A9F20099699E /* KeychainStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageTests.swift; sourceTree = "<group>"; };
 		F7C04A6A2299A9F20099699E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7C04A742299AACA0099699E /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		F7C04A762299AB360099699E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		F7C04A782299ABF10099699E /* KeychainQueryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQueryFactory.swift; sourceTree = "<group>"; };
+		F7C04A7A229A70920099699E /* KeychainQueryFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQueryFactoryTests.swift; sourceTree = "<group>"; };
+		F7C04A80229A70BB0099699E /* KeychainStorageHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainStorageHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C04A82229A70BB0099699E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7C04A8E229A70BD0099699E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C04A94229A71B30099699E /* KeychainStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7C04A7D229A70BB0099699E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +81,7 @@
 			children = (
 				F7C04A5C2299A9F20099699E /* KeychainStorage */,
 				F7C04A672299A9F20099699E /* KeychainStorageTests */,
+				F7C04A81229A70BB0099699E /* KeychainStorageHost */,
 				F7C04A5B2299A9F20099699E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +91,7 @@
 			children = (
 				F7C04A5A2299A9F20099699E /* KeychainStorage.framework */,
 				F7C04A632299A9F20099699E /* KeychainStorageTests.xctest */,
+				F7C04A80229A70BB0099699E /* KeychainStorageHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,10 +111,20 @@
 		F7C04A672299A9F20099699E /* KeychainStorageTests */ = {
 			isa = PBXGroup;
 			children = (
-				F7C04A682299A9F20099699E /* KeychainStorageTests.swift */,
+				F7C04A7A229A70920099699E /* KeychainQueryFactoryTests.swift */,
+				F7C04A94229A71B30099699E /* KeychainStorageTests.swift */,
 				F7C04A6A2299A9F20099699E /* Info.plist */,
 			);
 			path = KeychainStorageTests;
+			sourceTree = "<group>";
+		};
+		F7C04A81229A70BB0099699E /* KeychainStorageHost */ = {
+			isa = PBXGroup;
+			children = (
+				F7C04A82229A70BB0099699E /* AppDelegate.swift */,
+				F7C04A8E229A70BD0099699E /* Info.plist */,
+			);
+			path = KeychainStorageHost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,11 +171,29 @@
 			);
 			dependencies = (
 				F7C04A662299A9F20099699E /* PBXTargetDependency */,
+				F7C04A93229A711C0099699E /* PBXTargetDependency */,
 			);
 			name = KeychainStorageTests;
 			productName = KeychainStorageTests;
 			productReference = F7C04A632299A9F20099699E /* KeychainStorageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7C04A7F229A70BB0099699E /* KeychainStorageHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C04A8F229A70BD0099699E /* Build configuration list for PBXNativeTarget "KeychainStorageHost" */;
+			buildPhases = (
+				F7C04A7C229A70BB0099699E /* Sources */,
+				F7C04A7D229A70BB0099699E /* Frameworks */,
+				F7C04A7E229A70BB0099699E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainStorageHost;
+			productName = KeychainStorageHost;
+			productReference = F7C04A80229A70BB0099699E /* KeychainStorageHost.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -161,6 +211,10 @@
 					};
 					F7C04A622299A9F20099699E = {
 						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F7C04A7F229A70BB0099699E;
+					};
+					F7C04A7F229A70BB0099699E = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -170,6 +224,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F7C04A502299A9F20099699E;
 			productRefGroup = F7C04A5B2299A9F20099699E /* Products */;
@@ -178,6 +233,7 @@
 			targets = (
 				F7C04A592299A9F20099699E /* KeychainStorage */,
 				F7C04A622299A9F20099699E /* KeychainStorageTests */,
+				F7C04A7F229A70BB0099699E /* KeychainStorageHost */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +247,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F7C04A612299A9F20099699E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C04A7E229A70BB0099699E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,7 +277,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C04A692299A9F20099699E /* KeychainStorageTests.swift in Sources */,
+				F7C04A7B229A70920099699E /* KeychainQueryFactoryTests.swift in Sources */,
+				F7C04A95229A71B30099699E /* KeychainStorageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C04A7C229A70BB0099699E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C04A83229A70BB0099699E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +297,11 @@
 			isa = PBXTargetDependency;
 			target = F7C04A592299A9F20099699E /* KeychainStorage */;
 			targetProxy = F7C04A652299A9F20099699E /* PBXContainerItemProxy */;
+		};
+		F7C04A93229A711C0099699E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C04A7F229A70BB0099699E /* KeychainStorageHost */;
+			targetProxy = F7C04A92229A711C0099699E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -419,6 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainStorageHost.app/KeychainStorageHost";
 			};
 			name = Debug;
 		};
@@ -434,6 +512,41 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.radude89.KeychainStorageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainStorageHost.app/KeychainStorageHost";
+			};
+			name = Release;
+		};
+		F7C04A90229A70BD0099699E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KeychainStorageHost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.radude89.KeychainStorageHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7C04A91229A70BD0099699E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KeychainStorageHost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.radude89.KeychainStorageHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +579,15 @@
 			buildConfigurations = (
 				F7C04A722299A9F20099699E /* Debug */,
 				F7C04A732299A9F20099699E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C04A8F229A70BD0099699E /* Build configuration list for PBXNativeTarget "KeychainStorageHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C04A90229A70BD0099699E /* Debug */,
+				F7C04A91229A70BD0099699E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
