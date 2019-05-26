@@ -10,6 +10,9 @@
 		F7C04A642299A9F20099699E /* KeychainStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C04A5A2299A9F20099699E /* KeychainStorage.framework */; };
 		F7C04A692299A9F20099699E /* KeychainStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A682299A9F20099699E /* KeychainStorageTests.swift */; };
 		F7C04A6B2299A9F20099699E /* KeychainStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C04A5D2299A9F20099699E /* KeychainStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7C04A752299AACA0099699E /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A742299AACA0099699E /* KeyValueStorage.swift */; };
+		F7C04A772299AB360099699E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A762299AB360099699E /* KeychainStorage.swift */; };
+		F7C04A792299ABF10099699E /* KeychainQueryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04A782299ABF10099699E /* KeychainQueryFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		F7C04A632299A9F20099699E /* KeychainStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C04A682299A9F20099699E /* KeychainStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageTests.swift; sourceTree = "<group>"; };
 		F7C04A6A2299A9F20099699E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C04A742299AACA0099699E /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
+		F7C04A762299AB360099699E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		F7C04A782299ABF10099699E /* KeychainQueryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQueryFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				F7C04A5D2299A9F20099699E /* KeychainStorage.h */,
+				F7C04A742299AACA0099699E /* KeyValueStorage.swift */,
+				F7C04A762299AB360099699E /* KeychainStorage.swift */,
+				F7C04A782299ABF10099699E /* KeychainQueryFactory.swift */,
 				F7C04A5E2299A9F20099699E /* Info.plist */,
 			);
 			path = KeychainStorage;
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					F7C04A592299A9F20099699E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					F7C04A622299A9F20099699E = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C04A752299AACA0099699E /* KeyValueStorage.swift in Sources */,
+				F7C04A792299ABF10099699E /* KeychainQueryFactory.swift in Sources */,
+				F7C04A772299AB360099699E /* KeychainStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		F7C04A6F2299A9F20099699E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -349,6 +363,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KeychainStorage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.radude89.KeychainStorage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +381,7 @@
 		F7C04A702299A9F20099699E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -373,6 +390,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KeychainStorage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +407,7 @@
 		F7C04A722299A9F20099699E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KeychainStorageTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +425,7 @@
 		F7C04A732299A9F20099699E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KeychainStorageTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
