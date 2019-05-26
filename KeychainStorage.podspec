@@ -8,19 +8,24 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "KeychainStorage"
-  s.version      = "0.1.0"
-  s.summary      = "KeychainStorage is a simple wrapper for Keychain items. Use it to quickly save and retrieve sesnsitive information from Keychain."
-  s.homepage     = "https://github.com/radude89/KeychainStorage"
-  s.license      = "MIT"
-  s.authors             = { "Radu Dan" => "contact@radude89.com" }
-  s.social_media_url   = "https://twitter.com/radude89"
-  s.source       = { :git => "https://github.com/radude89/KeychainStorage.git", :tag => "#{s.version}" }
+  s.platform = :ios
+  s.ios.deployment_target = '12.0'
+  s.name = "KeychainStorage"
+  s.summary = "KeychainStorage is a simple wrapper for Keychain items. Use it to quickly save and retrieve sesnsitive information from Keychain."
+  s.requires_arc = true
 
-  s.ios.deployment_target = "12.0"
+  s.version = "0.1.0"
 
+  s.license = { :type => "MIT", :file => "LICENSE" }
+
+  s.author = { "Radu Dan" => "contact@radude89.com" }
+
+  s.homepage = "https://github.com/radude89/KeychainStorage"
+
+  s.source = { :git => "https://github.com/radude89/KeychainStorage.git",
+             :tag => "#{s.version}" }
+
+  s.source_files = "KeychainStorage/*.{swift}"
   s.swift_version = "5.0"
-
-  s.source_files = "KeychainStorage/*.swift"
 
 end
