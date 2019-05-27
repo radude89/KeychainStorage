@@ -1,4 +1,4 @@
 osx_image: xcode10.2
 language: swift
 script:
-  - fastlane scan --scheme FootballGather-ci --project FootballGather/FootballGather.xcodeproj --device 'iPhone Xʀ'
+  - fastlane scan --scheme KeychainStorage --project KeychainStorage.xcodeproj --device 'iPhone Xʀ'
