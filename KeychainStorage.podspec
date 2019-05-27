@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.summary = "KeychainStorage is a simple wrapper for Keychain items. Use it to quickly save and retrieve sesnsitive information from Keychain."
   s.requires_arc = true
 
-  s.version = "0.1.0"
+  s.version = "1.1"
 
   s.license = { :type => "MIT", :file => "LICENSE" }
 
