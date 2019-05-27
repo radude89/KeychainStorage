@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KeychainStorage
 
 class ViewController: UIViewController {
     
@@ -21,23 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         outputLabel.text = "Enter your desired values to be stored in Keychain and touch 'Store Value' button."
-    }
-    
-    func saveSecret() {
-        
-        let storage = KeychainStorage(service: "com.test.service")
-        try? storage.removeAll()
-        
-        if let myStringValue = try? storage.string(forKey: "myStringKey") {
-            // do something with myStringValue
-        }
-        
-        if let myBoolValue = try? storage.bool(forKey: "myBoolKey") {
-            // do something with myBoolValue
-        }
-        
-        
-        
     }
 
     @IBAction func onTouchStoreValues(_ sender: Any) {
