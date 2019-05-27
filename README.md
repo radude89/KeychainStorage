@@ -40,7 +40,7 @@ pod 'KeychainStorage', '~> 1.2'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate KeychainStorage into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "radude89/KeychainStorage" "1.1"
+github "radude89/KeychainStorage" "1.2"
 ```
 ### Manual
 
