@@ -1,4 +1,7 @@
-![Keychain Storage: Simple Keychain Wrapper in Swift](https://github.com/radude89/KeychainStorage/blob/master/Images/Logo.png)
+# Keychain Storage
+<p align="center">
+    <img src="https://github.com/radude89/KeychainStorage/blob/master/Images/Logo.png" width="50%" height="50%" alt="Keychain Storage" />
+</p>
 <p align="center">
   <img src="https://api.travis-ci.com/radude89/KeychainStorage.svg?branch=master" alt="build" />
   </a>
