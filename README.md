@@ -1,4 +1,3 @@
-# Keychain Storage
 <p align="center">
     <img src="https://github.com/radude89/KeychainStorage/blob/master/Images/Logo.png" width="50%" height="50%" alt="Keychain Storage" />
 </p>
