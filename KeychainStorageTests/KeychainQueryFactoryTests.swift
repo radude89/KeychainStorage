@@ -49,5 +49,28 @@ final class KeychainQueryFactoryTests: XCTestCase {
         XCTAssertEqual(value, expectedValue)
         XCTAssertGreaterThan(queryDictionary.count, 3)
     }
+    
+    func test_makeDeleteQuery_withoutKey() {
+        let expectedService = "com.test"
+        
+        let queryDictionary = KeychainBasicQueryFactory.makeDeleteQuery(forService: expectedService)
+        let service = queryDictionary[kSecAttrService as String] as! String
+        
+        XCTAssertEqual(service, expectedService)
+        XCTAssertGreaterThanOrEqual(queryDictionary.count, 2)
+    }
+    
+    func test_makeDeleteQuery_withKey() {
+        let expectedService = "com.test"
+        let expectedKey = "key.test"
+        
+        let queryDictionary = KeychainBasicQueryFactory.makeDeleteQuery(forService: expectedService, key: expectedKey)
+        let service = queryDictionary[kSecAttrService as String] as! String
+        let key = queryDictionary[kSecAttrAccount as String] as! String
+        
+        XCTAssertEqual(service, expectedService)
+        XCTAssertEqual(key, expectedKey)
+        XCTAssertGreaterThanOrEqual(queryDictionary.count, 3)
+    }
 
 }

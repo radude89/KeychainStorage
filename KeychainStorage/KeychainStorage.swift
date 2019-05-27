@@ -201,10 +201,7 @@ extension KeychainStorage: KeyValueStorage {
     /// - Parameter key: The key we want to remove the value.
     /// - Throws: Can throw errors if the operation was unsuccessful.
     public func removeValue(forKey key: String) throws {
-        var query: [String: Any] = [:]
-        query[kSecClass as String] = kSecClassGenericPassword
-        query[kSecAttrAccount as String] = key
-        query[kSecAttrService as String] = service
+        let query = KeychainBasicQueryFactory.makeDeleteQuery(forService: service, key: key)
         
         let status = SecItemDelete(query as CFDictionary)
         
@@ -217,9 +214,7 @@ extension KeychainStorage: KeyValueStorage {
     ///
     /// - Throws: Can throw errors if a value failed to be removed from the storage.
     public func removeAll() throws {
-        var query: [String: Any] = [:]
-        query[kSecClass as String] = kSecClassGenericPassword
-        query[kSecAttrService as String] = service
+        let query = KeychainBasicQueryFactory.makeDeleteQuery(forService: service)
         
         let status = SecItemDelete(query as CFDictionary)
         

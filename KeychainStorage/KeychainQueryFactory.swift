@@ -54,6 +54,9 @@ struct KeychainBasicQueryConfiguration {
 
 // MARK: - KeychainBasicQueryFactory
 
+/// Dictionary alias that represents keychain queries
+typealias KeychainQuery = [String: Any]
+
 /// Creates queries for accessing the Keychain
 enum KeychainBasicQueryFactory {
     
@@ -68,7 +71,7 @@ enum KeychainBasicQueryFactory {
     static func makeQuery(forService service: String,
                           key: String? = nil,
                           value: Data? = nil,
-                          configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()) -> [String: Any] {
+                          configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()) -> KeychainQuery {
         var queryDictionary: [String: Any] = [:]
         queryDictionary[kSecAttrService as String] = service
         queryDictionary[kSecClass as String] = configuration.secClass
@@ -83,6 +86,27 @@ enum KeychainBasicQueryFactory {
             queryDictionary[kSecMatchLimit as String] = configuration.matchLimit
             queryDictionary[kSecReturnData as String] = configuration.returnData
             queryDictionary[kSecReturnAttributes as String] = configuration.returnAttributes
+        }
+        
+        return queryDictionary
+    }
+    
+    /// Makes a query to delete items from Keychain based on a service, configuration and key.
+    ///
+    /// - Parameters:
+    ///   - service: The Keychain item's service.
+    ///   - key: The item's account name. Can be nil.
+    ///   - configuration: The configuration of the Keychain query.
+    /// - Returns: The Keychain query.
+    static func makeDeleteQuery(forService service: String,
+                                key: String? = nil,
+                                configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()) -> KeychainQuery {
+        var queryDictionary: [String: Any] = [:]
+        queryDictionary[kSecAttrService as String] = service
+        queryDictionary[kSecClass as String] = configuration.secClass
+        
+        if let key = key {
+            queryDictionary[kSecAttrAccount as String] = key
         }
         
         return queryDictionary
