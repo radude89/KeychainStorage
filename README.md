@@ -32,12 +32,12 @@ If you ever wanted to save something in Keychain without writing too much code, 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Keychain Storage into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'KeychainStorage', '~> 1.1'
+pod 'KeychainStorage', '~> 1.2'
 ```
 
 ### Carthage
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate KeychainStorage into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 github "radude89/KeychainStorage" "1.1"

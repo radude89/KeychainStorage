@@ -11,10 +11,10 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '12.0'
   s.name = "KeychainStorage"
-  s.summary = "KeychainStorage is a simple wrapper for Keychain items. Use it to quickly save and retrieve sesnsitive information from Keychain."
+  s.summary = "KeychainStorage is a simple wrapper for Keychain items. Use it to quickly save and retrieve sensitive information from Keychain."
   s.requires_arc = true
 
-  s.version = "1.1"
+  s.version = "1.2"
 
   s.license = { :type => "MIT", :file => "LICENSE" }
 
