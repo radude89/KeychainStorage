@@ -42,6 +42,19 @@ pod 'KeychainStorage', '~> 1.3.0'
 ```ogdl
 github "radude89/KeychainStorage" "1.3.0"
 ```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, you can add KeychainStorage as a dependency by adding it to the `dependencies` array of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/radude89/KeychainStorage.git", from: "1.0.0")
+]
+```
+
 ### Manual
 
 Just drag and drop into your project the following projects found in `KeychainStorage`:
