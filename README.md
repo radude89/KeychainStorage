@@ -6,7 +6,7 @@
   </a>
   <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
   <a href="https://swift.org/package-manager">
-        <img src="https://img.shields.io/badge/pod-1.3-darkorange.svg?style=flat" alt="Carthage" />
+        <img src="https://img.shields.io/badge/pod-1.3.0-darkorange.svg?style=flat" alt="Carthage" />
   </a>
   <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat" alt="Carthage" />
@@ -32,7 +32,7 @@ If you ever wanted to save something in Keychain without writing too much code, 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Keychain Storage into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'KeychainStorage', '~> 1.3'
+pod 'KeychainStorage', '~> 1.3.0'
 ```
 
 ### Carthage
