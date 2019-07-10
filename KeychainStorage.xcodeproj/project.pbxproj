@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		F7C30DF422D60E0D00D05EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C30DF322D60E0D00D05EA7 /* AppDelegate.swift */; };
 		OBJ_35 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* KeyValueStorage.swift */; };
 		OBJ_36 /* KeychainQueryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* KeychainQueryFactory.swift */; };
 		OBJ_37 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* KeychainStorage.swift */; };
@@ -45,11 +46,21 @@
 			remoteGlobalIDString = "KeychainStorage::KeychainStorageTests";
 			remoteInfo = KeychainStorageTests;
 		};
+		F7C30E0322D60EA000D05EA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C30DF022D60E0D00D05EA7;
+			remoteInfo = KeychainStorageHostApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7C30DF122D60E0D00D05EA7 /* KeychainStorageHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainStorageHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C30DF322D60E0D00D05EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7C30DFF22D60E0E00D05EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		"KeychainStorage::KeychainStorage::Product" /* KeychainStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"KeychainStorage::KeychainStorageTests::Product" /* KeychainStorageTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = KeychainStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"KeychainStorage::KeychainStorageTests::Product" /* KeychainStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = KeychainStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_11 /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		OBJ_12 /* KeychainQueryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQueryFactory.swift; sourceTree = "<group>"; };
@@ -65,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F7C30DEE22D60E0D00D05EA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -83,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7C30DF222D60E0D00D05EA7 /* KeychainStorageHostApp */ = {
+			isa = PBXGroup;
+			children = (
+				F7C30DF322D60E0D00D05EA7 /* AppDelegate.swift */,
+				F7C30DFF22D60E0E00D05EA7 /* Info.plist */,
+			);
+			path = KeychainStorageHostApp;
+			sourceTree = "<group>";
+		};
 		OBJ_14 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,22 +133,23 @@
 			children = (
 				"KeychainStorage::KeychainStorageTests::Product" /* KeychainStorageTests.xctest */,
 				"KeychainStorage::KeychainStorage::Product" /* KeychainStorage.framework */,
+				F7C30DF122D60E0D00D05EA7 /* KeychainStorageHostApp.app */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_14 /* Tests */,
+				F7C30DF222D60E0D00D05EA7 /* KeychainStorageHostApp */,
 				OBJ_19 /* Products */,
 				OBJ_27 /* LICENSE */,
 				OBJ_28 /* README.md */,
 				OBJ_29 /* KeychainStorage.podspec */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -147,6 +175,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F7C30DF022D60E0D00D05EA7 /* KeychainStorageHostApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C30E0222D60E0E00D05EA7 /* Build configuration list for PBXNativeTarget "KeychainStorageHostApp" */;
+			buildPhases = (
+				F7C30DED22D60E0D00D05EA7 /* Sources */,
+				F7C30DEE22D60E0D00D05EA7 /* Frameworks */,
+				F7C30DEF22D60E0D00D05EA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainStorageHostApp;
+			productName = KeychainStorageHostApp;
+			productReference = F7C30DF122D60E0D00D05EA7 /* KeychainStorageHostApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		"KeychainStorage::KeychainStorage" /* KeychainStorage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_31 /* Build configuration list for PBXNativeTarget "KeychainStorage" */;
@@ -174,6 +219,7 @@
 			);
 			dependencies = (
 				OBJ_59 /* PBXTargetDependency */,
+				F7C30E0422D60EA000D05EA7 /* PBXTargetDependency */,
 			);
 			name = KeychainStorageTests;
 			productName = KeychainStorageTests;
@@ -201,7 +247,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 9999;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					F7C30DF022D60E0D00D05EA7 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					"KeychainStorage::KeychainStorageTests" = {
+						TestTargetID = F7C30DF022D60E0D00D05EA7;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "KeychainStorage" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -210,8 +266,9 @@
 			knownRegions = (
 				English,
 				en,
+				Base,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,11 +277,30 @@
 				"KeychainStorage::SwiftPMPackageDescription" /* KeychainStoragePackageDescription */,
 				"KeychainStorage::KeychainStoragePackageTests::ProductTarget" /* KeychainStoragePackageTests */,
 				"KeychainStorage::KeychainStorageTests" /* KeychainStorageTests */,
+				F7C30DF022D60E0D00D05EA7 /* KeychainStorageHostApp */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F7C30DEF22D60E0D00D05EA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		F7C30DED22D60E0D00D05EA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C30DF422D60E0D00D05EA7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -255,6 +331,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F7C30E0422D60EA000D05EA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C30DF022D60E0D00D05EA7 /* KeychainStorageHostApp */;
+			targetProxy = F7C30E0322D60EA000D05EA7 /* PBXContainerItemProxy */;
+		};
 		OBJ_49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "KeychainStorage::KeychainStorageTests" /* KeychainStorageTests */;
@@ -268,6 +349,126 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F7C30E0022D60E0E00D05EA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KeychainStorageHostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.radude89.KeychainStorageHostApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7C30E0122D60E0E00D05EA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KeychainStorageHostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.radude89.KeychainStorageHostApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -425,6 +626,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = KeychainStorageTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainStorageHostApp.app/KeychainStorageHostApp";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -450,6 +652,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = KeychainStorageTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainStorageHostApp.app/KeychainStorageHostApp";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -458,6 +661,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F7C30E0222D60E0E00D05EA7 /* Build configuration list for PBXNativeTarget "KeychainStorageHostApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C30E0022D60E0E00D05EA7 /* Debug */,
+				F7C30E0122D60E0E00D05EA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "KeychainStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
