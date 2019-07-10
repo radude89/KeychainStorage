@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7C04A7F229A70BB0099699E"
-               BuildableName = "KeychainStorageHost.app"
-               BlueprintName = "KeychainStorageHost"
+               BlueprintIdentifier = "KeychainStorage::KeychainStorage"
+               BuildableName = "KeychainStorage.framework"
+               BlueprintName = "KeychainStorage"
                ReferencedContainer = "container:KeychainStorage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,17 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "KeychainStorage::KeychainStorageTests"
+               BuildableName = "KeychainStorageTests.xctest"
+               BlueprintName = "KeychainStorageTests"
+               ReferencedContainer = "container:KeychainStorage.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7C04A7F229A70BB0099699E"
-            BuildableName = "KeychainStorageHost.app"
-            BlueprintName = "KeychainStorageHost"
-            ReferencedContainer = "container:KeychainStorage.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +52,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7C04A7F229A70BB0099699E"
-            BuildableName = "KeychainStorageHost.app"
-            BlueprintName = "KeychainStorageHost"
+            BlueprintIdentifier = "KeychainStorage::KeychainStorage"
+            BuildableName = "KeychainStorage.framework"
+            BlueprintName = "KeychainStorage"
             ReferencedContainer = "container:KeychainStorage.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +70,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7C04A7F229A70BB0099699E"
-            BuildableName = "KeychainStorageHost.app"
-            BlueprintName = "KeychainStorageHost"
-            ReferencedContainer = "container:KeychainStorage.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
