@@ -73,11 +73,11 @@ enum KeychainBasicQueryFactory {
         queryDictionary[kSecAttrService as String] = service
         queryDictionary[kSecClass as String] = configuration.secClass
         
-        if let key = key {
+        if let key {
             queryDictionary[kSecAttrAccount as String] = key
         }
         
-        if let value = value {
+        if let value {
             queryDictionary[kSecValueData as String] = value
         } else {
             queryDictionary[kSecMatchLimit as String] = configuration.matchLimit
@@ -104,7 +104,7 @@ enum KeychainBasicQueryFactory {
         queryDictionary[kSecAttrService as String] = service
         queryDictionary[kSecClass as String] = configuration.secClass
         
-        if let key = key {
+        if let key {
             queryDictionary[kSecAttrAccount as String] = key
         }
         

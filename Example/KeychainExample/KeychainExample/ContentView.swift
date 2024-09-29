@@ -73,7 +73,3 @@ struct ContentView: View {
         outputText = Self.initialOutput
     }
 }
-
-#Preview {
-    ContentView()
-}
