@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		F7D278652CA991620096C830 /* KeychainStorageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainStorageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7DC3AF32CA9993D00532233 /* KeychainExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F7D278672CA991620096C830 /* KeychainStorageExample */ = {
+		F7DC3AF52CA9993D00532233 /* KeychainExample */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KeychainStorageExample;
+			path = KeychainExample;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F7D278622CA991620096C830 /* Frameworks */ = {
+		F7DC3AF02CA9993D00532233 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F7D2785C2CA991620096C830 = {
+		F7DC3AEA2CA9993D00532233 = {
 			isa = PBXGroup;
 			children = (
-				F7D278672CA991620096C830 /* KeychainStorageExample */,
-				F7D278662CA991620096C830 /* Products */,
+				F7DC3AF52CA9993D00532233 /* KeychainExample */,
+				F7DC3AF42CA9993D00532233 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F7D278662CA991620096C830 /* Products */ = {
+		F7DC3AF42CA9993D00532233 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7D278652CA991620096C830 /* KeychainStorageExample.app */,
+				F7DC3AF32CA9993D00532233 /* KeychainExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,67 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7D278642CA991620096C830 /* KeychainStorageExample */ = {
+		F7DC3AF22CA9993D00532233 /* KeychainExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7D278732CA991640096C830 /* Build configuration list for PBXNativeTarget "KeychainStorageExample" */;
+			buildConfigurationList = F7DC3B012CA9993F00532233 /* Build configuration list for PBXNativeTarget "KeychainExample" */;
 			buildPhases = (
-				F7D278612CA991620096C830 /* Sources */,
-				F7D278622CA991620096C830 /* Frameworks */,
-				F7D278632CA991620096C830 /* Resources */,
+				F7DC3AEF2CA9993D00532233 /* Sources */,
+				F7DC3AF02CA9993D00532233 /* Frameworks */,
+				F7DC3AF12CA9993D00532233 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F7D278672CA991620096C830 /* KeychainStorageExample */,
+				F7DC3AF52CA9993D00532233 /* KeychainExample */,
 			);
-			name = KeychainStorageExample;
+			name = KeychainExample;
 			packageProductDependencies = (
 			);
-			productName = KeychainStorageExample;
-			productReference = F7D278652CA991620096C830 /* KeychainStorageExample.app */;
+			productName = KeychainExample;
+			productReference = F7DC3AF32CA9993D00532233 /* KeychainExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F7D2785D2CA991620096C830 /* Project object */ = {
+		F7DC3AEB2CA9993D00532233 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					F7D278642CA991620096C830 = {
+					F7DC3AF22CA9993D00532233 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = F7D278602CA991620096C830 /* Build configuration list for PBXProject "KeychainStorageExample" */;
+			buildConfigurationList = F7DC3AEE2CA9993D00532233 /* Build configuration list for PBXProject "KeychainExample" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = F7D2785C2CA991620096C830;
+			mainGroup = F7DC3AEA2CA9993D00532233;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				F71BE9CF2CA9989B00931907 /* XCRemoteSwiftPackageReference "KeychainStorage" */,
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = F7D278662CA991620096C830 /* Products */;
+			productRefGroup = F7DC3AF42CA9993D00532233 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7D278642CA991620096C830 /* KeychainStorageExample */,
+				F7DC3AF22CA9993D00532233 /* KeychainExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F7D278632CA991620096C830 /* Resources */ = {
+		F7DC3AF12CA9993D00532233 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -118,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F7D278612CA991620096C830 /* Sources */ = {
+		F7DC3AEF2CA9993D00532233 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F7D278712CA991640096C830 /* Debug */ = {
+		F7DC3AFF2CA9993F00532233 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -191,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		F7D278722CA991640096C830 /* Release */ = {
+		F7DC3B002CA9993F00532233 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -247,14 +244,14 @@
 			};
 			name = Release;
 		};
-		F7D278742CA991640096C830 /* Debug */ = {
+		F7DC3B022CA9993F00532233 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"KeychainStorageExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"KeychainExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 42L6GB6DU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -268,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rdan.KeychainStorageExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdan.KeychainExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -276,14 +273,14 @@
 			};
 			name = Debug;
 		};
-		F7D278752CA991640096C830 /* Release */ = {
+		F7DC3B032CA9993F00532233 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"KeychainStorageExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"KeychainExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 42L6GB6DU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -297,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rdan.KeychainStorageExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdan.KeychainExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,36 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7D278602CA991620096C830 /* Build configuration list for PBXProject "KeychainStorageExample" */ = {
+		F7DC3AEE2CA9993D00532233 /* Build configuration list for PBXProject "KeychainExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7D278712CA991640096C830 /* Debug */,
-				F7D278722CA991640096C830 /* Release */,
+				F7DC3AFF2CA9993F00532233 /* Debug */,
+				F7DC3B002CA9993F00532233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7D278732CA991640096C830 /* Build configuration list for PBXNativeTarget "KeychainStorageExample" */ = {
+		F7DC3B012CA9993F00532233 /* Build configuration list for PBXNativeTarget "KeychainExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7D278742CA991640096C830 /* Debug */,
-				F7D278752CA991640096C830 /* Release */,
+				F7DC3B022CA9993F00532233 /* Debug */,
+				F7DC3B032CA9993F00532233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F71BE9CF2CA9989B00931907 /* XCRemoteSwiftPackageReference "KeychainStorage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/radude89/KeychainStorage/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
-	rootObject = F7D2785D2CA991620096C830 /* Project object */;
+	rootObject = F7DC3AEB2CA9993D00532233 /* Project object */;
 }

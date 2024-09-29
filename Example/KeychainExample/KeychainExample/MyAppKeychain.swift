@@ -1,13 +1,5 @@
-//
-//  MyAppKeychain.swift
-//  KeychainStorageExample
-//
-//  Created by Dan, Radu-Ionut (RO - Bucharest) on 26/05/2019.
-//  Copyright © 2019 radude89. All rights reserved.
-//
-
 import Foundation
-//import KeychainStorage
+import KeychainStorage
 
 final class MyAppKeychain {
     
