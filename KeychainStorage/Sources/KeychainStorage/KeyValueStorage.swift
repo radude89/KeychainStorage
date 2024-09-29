@@ -1,14 +1,6 @@
-//
-//  KeyValueStorage.swift
-//  KeychainStorage
-//
-//  Created by Dan, Radu-Ionut (RO - Bucharest) on 25/05/2019.
-//  Copyright © 2019 radude89. All rights reserved.
-//
-
 import Foundation
 
-// MARK: - KV Storage
+// MARK: - Key-Value Storage
 
 /// Base protocol for KeyValue storages, e.g. Keychain or UserDefaults
 public protocol KeyValueStorage {

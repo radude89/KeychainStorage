@@ -2,9 +2,7 @@
     <img src="https://github.com/radude89/KeychainStorage/blob/master/Images/Logo.png" width="50%" height="50%" alt="Keychain Storage" />
 </p>
 <p align="center">
-  <img src="https://api.travis-ci.com/radude89/KeychainStorage.svg?branch=master" alt="build" />
-  </a>
-  <img src="https://img.shields.io/badge/Swift-5.1-orange.svg" />
+  <img src="https://img.shields.io/badge/Swift-6-orange.svg" />
   <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
   </a>
@@ -24,9 +22,9 @@ If you ever wanted to save something in Keychain without writing too much code, 
 
 ## Requirements
 
-- iOS 12.0+
-- Xcode 10.2+
-- Swift 5+
+- iOS 18.0+
+- Xcode 16.0+
+- Swift 6+
 
 ## Installation
 
