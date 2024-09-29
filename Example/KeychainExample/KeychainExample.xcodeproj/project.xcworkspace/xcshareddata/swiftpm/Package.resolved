@@ -1,0 +1,15 @@
+{
+  "originHash" : "e5d0ae98601a194178ca623da267f450beb13831535fd842c9add3b9129c1dc5",
+  "pins" : [
+    {
+      "identity" : "keychainstorage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/radude89/KeychainStorage",
+      "state" : {
+        "revision" : "e5ec9138fd062d5ebdb9cf5b59dfcdafb1902c31",
+        "version" : "2.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

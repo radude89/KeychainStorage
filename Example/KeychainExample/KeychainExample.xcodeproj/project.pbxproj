@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F7FB163E2CA99B1F004F2569 /* KeychainStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7FB163D2CA99B1F004F2569 /* KeychainStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F7DC3AF32CA9993D00532233 /* KeychainExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FB163E2CA99B1F004F2569 /* KeychainStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = KeychainExample;
 			packageProductDependencies = (
+				F7FB163D2CA99B1F004F2569 /* KeychainStorage */,
 			);
 			productName = KeychainExample;
 			productReference = F7DC3AF32CA9993D00532233 /* KeychainExample.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = F7DC3AEA2CA9993D00532233;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F7FB163C2CA99B1F004F2569 /* XCRemoteSwiftPackageReference "KeychainStorage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F7DC3AF42CA9993D00532233 /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7FB163C2CA99B1F004F2569 /* XCRemoteSwiftPackageReference "KeychainStorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/radude89/KeychainStorage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7FB163D2CA99B1F004F2569 /* KeychainStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7FB163C2CA99B1F004F2569 /* XCRemoteSwiftPackageReference "KeychainStorage" */;
+			productName = KeychainStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F7DC3AEB2CA9993D00532233 /* Project object */;
 }

@@ -23,7 +23,7 @@ extension MyAppKeychain {
             return try? storage.bool(forKey: Keys.rememberMe)
         }
         set {
-            if let newValue = newValue {
+            if let newValue {
                 try? storage.set(newValue, key: Keys.rememberMe)
             } else {
                 try? storage.removeValue(forKey: Keys.rememberMe)
@@ -36,7 +36,7 @@ extension MyAppKeychain {
             return try? storage.string(forKey: Keys.secret)
         }
         set {
-            if let newValue = newValue {
+            if let newValue {
                 try? storage.set(newValue, key: Keys.secret)
             } else {
                 try? storage.removeValue(forKey: Keys.secret)

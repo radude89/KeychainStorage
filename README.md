@@ -7,7 +7,7 @@
   <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
   </a>
-  
+
 </p>
 
 Keychain Storage is a simple Keychain wrapper written in Swift. If you’ve ever wanted to save something in the Keychain without writing excessive code, you’ve come to the right place!
@@ -28,7 +28,7 @@ To add KeychainStorage as a dependency, include it in the `dependencies` array o
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/radude89/KeychainStorage.git", from: "2.0.0")
+    .package(url: "https://github.com/radude89/KeychainStorage.git", from: "2.0.1")
 ]
 ```
 
