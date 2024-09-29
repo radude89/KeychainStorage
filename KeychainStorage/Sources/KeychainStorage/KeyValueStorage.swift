@@ -2,62 +2,63 @@ import Foundation
 
 // MARK: - Key-Value Storage
 
-/// Base protocol for KeyValue storages, e.g. Keychain or UserDefaults
+/// A protocol defining a generic key-value storage interface.
+/// Conforming types can implement storage solutions such as Keychain or UserDefaults.
 public protocol KeyValueStorage {
     
-    /// Returns the string value of the given key.
+    /// Retrieves the string value associated with the specified key.
     ///
-    /// - Parameter key: The key we want to search the value.
-    /// - Returns: The value of the given key.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    /// - Parameter key: The key for which to retrieve the value.
+    /// - Returns: The string value associated with the key, or `nil` if not found.
+    /// - Throws: Throws an error if the data is invalid or if a transformation error occurs.
     func string(forKey key: String) throws -> String?
     
-    /// Returns the data value of the given key.
+    /// Retrieves the data value associated with the specified key.
     ///
-    /// - Parameter key: The key we want to search the value.
-    /// - Returns: The value of the given key.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    /// - Parameter key: The key for which to retrieve the value.
+    /// - Returns: The data value associated with the key, or `nil` if not found.
+    /// - Throws: Throws an error if the data is invalid or if a transformation error occurs.
     func data(forKey key: String) throws -> Data?
     
-    /// Returns the bool value of the given key.
+    /// Retrieves the Boolean value associated with the specified key.
     ///
-    /// - Parameter key: The key we want to search the value.
-    /// - Returns: The value of the given key.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    /// - Parameter key: The key for which to retrieve the value.
+    /// - Returns: The Boolean value associated with the key, or `nil` if not found.
+    /// - Throws: Throws an error if the data is invalid or if a transformation error occurs.
     func bool(forKey key: String) throws -> Bool?
     
-    /// Sets a string value at a given key.
+    /// Stores a string value at the specified key.
     ///
     /// - Parameters:
-    ///   - value: The value we want to store.
-    ///   - key: The key where we want to store the value.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    ///   - value: The string value to be stored.
+    ///   - key: The key under which to store the value.
+    /// - Throws: Throws an error if the data is invalid or if a transformation error occurs.
     func set(_ value: String, key: String) throws
     
-    /// Sets a data value at a given key.
+    /// Stores a data value at the specified key.
     ///
     /// - Parameters:
-    ///   - value: The value we want to store.
-    ///   - key: The key where we want to store the value.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    ///   - value: The data value to be stored.
+    ///   - key: The key under which to store the value.
+    /// - Throws: Throws an error if the data is invalid or if a transformation error occurs.
     func set(_ value: Data, key: String) throws
     
-    /// Sets a bool value at a given key.
+    /// Stores a Boolean value at the specified key.
     ///
     /// - Parameters:
-    ///   - value: The value we want to store.
-    ///   - key: The key where we want to store the value.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    ///   - value: The Boolean value to be stored.
+    ///   - key: The key under which to store the value.
+    /// - Throws: Throws an error if the data is invalid or if a transformation error occurs.
     func set(_ value: Bool, key: String) throws
     
-    /// Removes the value at a given key.
+    /// Removes the value associated with the specified key.
     ///
-    /// - Parameter key: The key we want to remove the value.
-    /// - Throws: Can throw errors if the operation was unsuccessful.
+    /// - Parameter key: The key for which to remove the value.
+    /// - Throws: Throws an error if the operation is unsuccessful.
     func removeValue(forKey key: String) throws
     
     /// Removes all values from the storage.
     ///
-    /// - Throws: Can throw errors if a value failed to be removed from the storage.
+    /// - Throws: Throws an error if any value fails to be removed from the storage.
     func removeAll() throws
 }
