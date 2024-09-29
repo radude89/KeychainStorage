@@ -3,19 +3,11 @@
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Swift-6-orange.svg" />
+
   <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
   </a>
-  <a href="https://github.com/Carthage/Carthage">
-        <img src="https://img.shields.io/badge/pod-1.3.0-darkorange.svg?style=flat" alt="Carthage" />
-  </a>
-  <a href="https://swift.org/package-manager">
-        <img src="https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat" alt="Carthage" />
-  </a>
-  <img src="https://img.shields.io/badge/platforms-iOS-brightgreen.svg?style=flat" alt="iOS" />
-  <a href="https://twitter.com/johnsundell">
-        <img src="https://img.shields.io/badge/twitter-@radude89-blue.svg?style=flat" alt="Twitter: @radude89" />
-  </a>
+  
 </p>
 
 Keychain Storage is a simple Keychain wrapper written in Swift. If you’ve ever wanted to save something in the Keychain without writing excessive code, you’ve come to the right place!
