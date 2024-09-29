@@ -63,10 +63,12 @@ enum KeychainBasicQueryFactory {
     ///   - value: The item's value. Can be `nil`.
     ///   - configuration: The configuration settings for the Keychain query. Defaults to a new instance of `KeychainBasicQueryConfiguration`.
     /// - Returns: A dictionary representing the Keychain query.
-    static func makeQuery(forService service: String,
-                          key: String? = nil,
-                          value: Data? = nil,
-                          configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()) -> KeychainQuery {
+    static func makeQuery(
+        forService service: String,
+        key: String? = nil,
+        value: Data? = nil,
+        configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()
+    ) -> KeychainQuery {
         var queryDictionary: [String: Any] = [:]
         queryDictionary[kSecAttrService as String] = service
         queryDictionary[kSecClass as String] = configuration.secClass
@@ -93,9 +95,11 @@ enum KeychainBasicQueryFactory {
     ///   - key: The item's account name. Can be `nil`.
     ///   - configuration: The configuration settings for the Keychain query. Defaults to a new instance of `KeychainBasicQueryConfiguration`.
     /// - Returns: A dictionary representing the Keychain delete query.
-    static func makeDeleteQuery(forService service: String,
-                                key: String? = nil,
-                                configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()) -> KeychainQuery {
+    static func makeDeleteQuery(
+        forService service: String,
+        key: String? = nil,
+        configuration: KeychainBasicQueryConfiguration = KeychainBasicQueryConfiguration()
+    ) -> KeychainQuery {
         var queryDictionary: [String: Any] = [:]
         queryDictionary[kSecAttrService as String] = service
         queryDictionary[kSecClass as String] = configuration.secClass
