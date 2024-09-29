@@ -28,7 +28,7 @@ To add KeychainStorage as a dependency, include it in the `dependencies` array o
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/radude89/KeychainStorage.git", from: "2.0.1")
+    .package(url: "https://github.com/radude89/KeychainStorage.git", from: "2.0.2")
 ]
 ```
 
