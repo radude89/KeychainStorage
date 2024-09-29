@@ -3,10 +3,10 @@ import Security
 
 // MARK: - KeychainStorageError
 
-/// Defines the keychain errors.
+/// An enumeration representing errors that can occur while accessing the Keychain.
 ///
-/// - unhandledError: Thrown when a keychain operation failed with a given `OSStatus`.
-/// - invalidData: Thrown when the data expected was with an invalid format.
+/// - unhandledError: Thrown when a Keychain operation fails with a specific `OSStatus`.
+/// - invalidData: Thrown when the data received is in an invalid format.
 public enum KeychainStorageError: Error {
     case unhandledError(OSStatus)
     case invalidData
@@ -14,14 +14,14 @@ public enum KeychainStorageError: Error {
 
 // MARK: - KeychainStorage
 
-/// This class is a wrapper to the Keychain, defined by a service.
-/// All Keychain items are considered generic passwords `kSecClassGenericPassword`.
+/// A class that acts as a wrapper for Keychain operations, associated with a specific service.
+/// All Keychain items are treated as generic passwords, represented by `kSecClassGenericPassword`.
 public class KeychainStorage {
     
-    /// Defines the service which all Keychain queries will use.
+    /// The service that will be used for all Keychain queries.
     private let service: String
     
-    /// Base class initializer, where the service variable is set.
+    /// Initializes a new instance of `KeychainStorage` with the specified service.
     ///
     /// - Parameter service: The service that will be used for all Keychain queries.
     public init(service: String) {
@@ -33,19 +33,18 @@ public class KeychainStorage {
 
 extension KeychainStorage: KeyValueStorage {
     
-    /// Sets a bool value in the Keychain.
+    /// Stores a Boolean value in the Keychain.
     ///
     /// ### Usage Example: ###
-    ///
-    /// ````
+    /// ```swift
     /// let storage = KeychainStorage(service: "com.foo")
     /// try storage.set(true, key: "myKey")
-    /// ````
+    /// ```
     ///
     /// - Parameters:
-    ///   - value: The value to be set in the Keychain.
-    ///   - key: The key we want to put the value.
-    /// - Throws: Can throw an `unhandledError` with a status.
+    ///   - value: The Boolean value to be stored in the Keychain.
+    ///   - key: The key under which the value will be stored.
+    /// - Throws: Throws `KeychainStorageError.unhandledError` if the operation fails.
     public func set(_ value: Bool, key: String) throws {
         let bytes: [UInt8] = value ? [1] : [0]
         let data = Data(bytes)
@@ -53,24 +52,23 @@ extension KeychainStorage: KeyValueStorage {
         try set(data, key: key)
     }
     
-    /// Sets a data value in the Keychain.
+    /// Stores a Data value in the Keychain.
     ///
     /// ### Usage Example: ###
-    ///
-    /// ````
+    /// ```swift
     /// let data = Data(base64Encoded: "encoded")!
     /// let storage = KeychainStorage(service: "com.foo")
     /// try storage.set(data, key: "myKey")
-    /// ````
+    /// ```
     ///
     /// - Parameters:
-    ///   - value: The value to be set in the Keychain.
-    ///   - key: The key we want to put the value.
-    /// - Throws: Can throw an `unhandledError` with a status.
+    ///   - value: The Data value to be stored in the Keychain.
+    ///   - key: The key under which the value will be stored.
+    /// - Throws: Throws `KeychainStorageError.unhandledError` if the operation fails.
     public func set(_ value: Data, key: String) throws {
         let query = KeychainBasicQueryFactory.makeQuery(forService: service, key: key, value: value)
         
-        // Delete anything that's already there, just in case
+        // Remove any existing item at the specified key to avoid duplication
         SecItemDelete(query as CFDictionary)
         
         let status = SecItemAdd(query as CFDictionary, nil)
@@ -80,19 +78,18 @@ extension KeychainStorage: KeyValueStorage {
         }
     }
     
-    /// Sets a string value in the Keychain.
+    /// Stores a String value in the Keychain.
     ///
     /// ### Usage Example: ###
-    ///
-    /// ````
+    /// ```swift
     /// let storage = KeychainStorage(service: "com.foo")
     /// try storage.set("Super secret value", key: "myKey")
-    /// ````
+    /// ```
     ///
     /// - Parameters:
-    ///   - value: The value to be set in the Keychain.
-    ///   - key: The key we want to put the value.
-    /// - Throws: Can throw an `invalidData` storage error or an `unhandledError` with a status.
+    ///   - value: The String value to be stored in the Keychain.
+    ///   - key: The key under which the value will be stored.
+    /// - Throws: Throws `KeychainStorageError.invalidData` if the value cannot be converted to Data or `KeychainStorageError.unhandledError` if the operation fails.
     public func set(_ value: String, key: String) throws {
         guard let data = value.data(using: .utf8) else {
             throw KeychainStorageError.invalidData
@@ -101,20 +98,19 @@ extension KeychainStorage: KeyValueStorage {
         try set(data, key: key)
     }
     
-    /// Returns the string value of the given key.
+    /// Retrieves the String value associated with the specified key.
     ///
     /// ### Usage Example: ###
-    ///
-    /// ````
+    /// ```swift
     /// let storage = KeychainStorage(service: "com.foo")
     /// if let myValue = try? storage.string(forKey: "myKey") {
-    ///     // do something with `myValue`
+    ///     // Use `myValue`
     /// }
-    /// ````
+    /// ```
     ///
-    /// - Parameter key: The key we want to search the value.
-    /// - Returns: The value of the given key.
-    /// - Throws: Can throw errors, for example if data is invalid or if there was a transformation error.
+    /// - Parameter key: The key for which to retrieve the value.
+    /// - Returns: The String value associated with the key, or `nil` if not found.
+    /// - Throws: Throws `KeychainStorageError.invalidData` if the data is invalid or cannot be converted.
     public func string(forKey key: String) throws -> String? {
         guard let data = try data(forKey: key) else {
             return nil
@@ -127,20 +123,19 @@ extension KeychainStorage: KeyValueStorage {
         return value
     }
     
-    /// Returns the data value of the given key.
+    /// Retrieves the Data value associated with the specified key.
     ///
     /// ### Usage Example: ###
-    ///
-    /// ````
+    /// ```swift
     /// let storage = KeychainStorage(service: "com.foo")
-    /// if let myValue = try? data(forKey: "myKey") {
-    ///     // do something with `myValue`
+    /// if let myValue = try? storage.data(forKey: "myKey") {
+    ///     // Use `myValue`
     /// }
-    /// ````
+    /// ```
     ///
-    /// - Parameter key: The key we want to search the value.
-    /// - Returns: The value of the given key.
-    /// - Throws: Can throw an `unhandledError` with a status.
+    /// - Parameter key: The key for which to retrieve the value.
+    /// - Returns: The Data value associated with the key, or `nil` if not found.
+    /// - Throws: Throws `KeychainStorageError.unhandledError` if the operation fails.
     public func data(forKey key: String) throws -> Data? {
         let query = KeychainBasicQueryFactory.makeQuery(forService: service, key: key)
         var result: AnyObject?
@@ -155,27 +150,26 @@ extension KeychainStorage: KeyValueStorage {
         }
         
         if let resultDictionary = result as? [String: Any],
-            let data = resultDictionary[kSecValueData as String] as? Data {
+           let data = resultDictionary[kSecValueData as String] as? Data {
             return data
         }
         
         return nil
     }
     
-    /// Returns the bool value of the given key.
+    /// Retrieves the Boolean value associated with the specified key.
     ///
     /// ### Usage Example: ###
-    ///
-    /// ````
+    /// ```swift
     /// let storage = KeychainStorage(service: "com.foo")
-    /// if let myValue = try? bool(forKey: "myKey") {
-    ///     // do something with `myValue`
+    /// if let myValue = try? storage.bool(forKey: "myKey") {
+    ///     // Use `myValue`
     /// }
-    /// ````
+    /// ```
     ///
-    /// - Parameter key: The key we want to search the value.
-    /// - Returns: The value of the given key.
-    /// - Throws: Can throw an `unhandledError` with a status.
+    /// - Parameter key: The key for which to retrieve the value.
+    /// - Returns: The Boolean value associated with the key, or `nil` if not found.
+    /// - Throws: Throws `KeychainStorageError.unhandledError` if the operation fails.
     public func bool(forKey key: String) throws -> Bool? {
         guard let data = try data(forKey: key) else {
             return nil
@@ -188,10 +182,10 @@ extension KeychainStorage: KeyValueStorage {
         return nil
     }
     
-    /// Removes the value at a given key.
+    /// Removes the value associated with the specified key from the Keychain.
     ///
-    /// - Parameter key: The key we want to remove the value.
-    /// - Throws: Can throw errors if the operation was unsuccessful.
+    /// - Parameter key: The key for which to remove the value.
+    /// - Throws: Throws `KeychainStorageError.unhandledError` if the operation fails.
     public func removeValue(forKey key: String) throws {
         let query = KeychainBasicQueryFactory.makeDeleteQuery(forService: service, key: key)
         
@@ -202,9 +196,9 @@ extension KeychainStorage: KeyValueStorage {
         }
     }
     
-    /// Removes all values from the storage.
+    /// Removes all values associated with the service from the Keychain.
     ///
-    /// - Throws: Can throw errors if a value failed to be removed from the storage.
+    /// - Throws: Throws `KeychainStorageError.unhandledError` if the operation fails.
     public func removeAll() throws {
         let query = KeychainBasicQueryFactory.makeDeleteQuery(forService: service)
         
